@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "sync-request": "^6.1.0"
+  }
+}
