@@ -6,5 +6,6 @@ let taskPath = path.join(__dirname, '..', 'index.js');
 let tmr: tmrm.TaskMockRunner = new tmrm.TaskMockRunner(taskPath);
 
 tmr.setInput('samplestring', 'bad');
+tmr.setInput('pathtojson', 'does not exist')
 
 tmr.run();

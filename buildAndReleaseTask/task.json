@@ -3,13 +3,13 @@
     "id": "9b96b3e5-13dd-40f3-b436-cd57abc16444",
     "name": "buildandreleasetask",
     "friendlyName": "Scrutinize",
-    "description": "This is for running a Scrutinize tasks",
+    "description": "This is for running Scrutinize tasks",
     "helpMarkDown": "",
     "category": "Utility",
     "author": "Jonathan Opperman",
     "version": {
         "Major": 1,
-        "Minor": 0,
+        "Minor": 1,
         "Patch": 0
     },
     "instanceNameFormat": "Echo $(samplestring)",
@@ -21,6 +21,14 @@
             "defaultValue": "",
             "required": true,
             "helpMarkDown": "A sample string"
+        },
+        {
+            "name": "pathtojson",
+            "type": "string",
+            "label": "Custom path to scrutinize.json",
+            "defaultValue": "./",
+            "required": true,
+            "helpMarkDown": "Custom path to scrutinize.json"
         }
     ],
     "execution": {
