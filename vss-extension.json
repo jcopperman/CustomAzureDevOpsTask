@@ -2,8 +2,8 @@
     "manifestVersion": 1,
     "id": "build-release-task",
     "name": "Scrutinize Tools",
-    "version": "1.1.0",
-    "publisher": "JonathanOpperman",
+    "version": "1.2.0",
+    "publisher": "TeamOrbit",
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"

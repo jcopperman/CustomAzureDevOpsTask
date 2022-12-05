@@ -49,9 +49,6 @@ function run() {
                 }
                 console.log('Hello', inputString);
             }
-            // catch (err) {
-            //     tl.setResult(tl.TaskResult.Failed, err.message);
-            // }
             catch (err) {
                 if (err instanceof SyntaxError) {
                     tl.setResult(tl.TaskResult.Failed, err.message);

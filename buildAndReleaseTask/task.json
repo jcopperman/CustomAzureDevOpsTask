@@ -1,12 +1,12 @@
 {
     "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
     "id": "9b96b3e5-13dd-40f3-b436-cd57abc16444",
-    "name": "buildandreleasetask",
+    "name": "scrutinizetask",
     "friendlyName": "Scrutinize",
     "description": "This is for running Scrutinize tasks",
-    "helpMarkDown": "",
+    "helpMarkDown": "Runs scrutinize",
     "category": "Utility",
-    "author": "Jonathan Opperman",
+    "author": "Team Orbit",
     "version": {
         "Major": 1,
         "Minor": 1,
@@ -24,11 +24,49 @@
         },
         {
             "name": "pathtojson",
-            "type": "string",
+            "type": "filePath",
             "label": "Custom path to scrutinize.json",
-            "defaultValue": "./",
-            "required": true,
-            "helpMarkDown": "Custom path to scrutinize.json"
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "Custom path to project scrutinize.json"
+        },
+        {
+            "name": "uploadreport",
+            "type": "boolean",
+            "label": "Upload report",
+            "defaultValue": true,
+            "helpMarkDown": "Uploads a report to table storage"
+        },
+        {
+            "name": "tablestorageconnection",
+            "type": "pickList",
+            "label": "Table storage connection string",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "Table storage connection string"
+        },
+        {
+            "name": "sendtelemetry",
+            "type": "boolean",
+            "label": "Send telemetry",
+            "defaultValue": true,
+            "helpMarkDown": "Sends telemetry to Datadog"
+        },
+        {
+            "name": "ddappkey",
+            "type": "pickList",
+            "label": "Datadog App Key",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "The Datadog APP Key"
+        },
+        {
+            "name": "ddapikey",
+            "type": "pickList",
+            "label": "Datadog API Key",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "The Datadog API Key"
         }
     ],
     "execution": {
